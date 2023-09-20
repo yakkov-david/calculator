@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic calculator</title>
+</head>
+<body>
+  
+  <div id="content">
+        <div id="calculator-container">
+          <form name="calc">
+            <!-- The name of the form is "calc" -->
+            <label for="output">A Basic Calculator</label>
+            <br>
+            <input id="output" name="output" type="text">
+            <input id="result" name="result" type="text" readonly>
+            <!-- the name of the textbox is "output" -->
+            <br>
+            <input type="button"  value="  1  "  onclick="calcu('1')">
+            <input type="button"  value="  2  "  onclick="calcu('2')">
+            <input type="button"  value="  3  "  onclick="calcu('3')">
+            <input type="button"  value="  +  "  onclick="calcu('+')">
+            <br>
+            <input type="button"  value="  4  "  onclick="calcu('4')">
+            <input type="button"  value="  5  "  onclick="calcu('5')">
+            <input type="button"  value="  6  "  onclick="calcu('6')">
+            <input type="button"  value="  -   "  onclick="calcu('-')">
+            <br>
+            <input type="button"  value="  7  "  onclick="calcu('7')">
+            <input type="button"  value="  8  "  onclick="calcu('8')">
+            <input type="button"  value="  9  "  onclick="calcu('9')">
+            <input type="button"  value="  /   "  onclick="calcu('/')">
+            <br>
+            <input type="button"  value="  C  "  onclick="calcu('c')">
+            <input type="button"  value="  0  "   onclick="calcu('0')">
+            <input type="button"  value="  =  "  onclick="calcu('=')">
+            <input type="button"  value="  x  "  onclick="calcu('*')">
+            <input type="button"  value="  .  "  onclick="calcu('.')">
+          </form>
+          <h2 style="color: blue;">Switch Version</h2>
+        </div>
+  </div>
+  <script type="text/javascript" src="calculator.js"></script>
+</body>  
+
+  
+</html>

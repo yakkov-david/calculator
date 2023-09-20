@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Only Numbers Input Field</title>
+  </head>
+  <body>
+    <label for="number-input">Enter a number:</label>
+    <input type="text" id="number-input">
+    <script>
+      const numberInput = document.getElementById("number-input");
+      numberInput.addEventListener("keydown", (event) => {
+        //console.log(event)
+        if (!isNumberKey(event.key)) {
+          event.preventDefault();
+        }
+
+
+      });
+
+      function isNumberKey(key) {
+        return /^[0-9]$/.test(key);
+      }
+    </script>
+  </body>
+</html>

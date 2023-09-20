@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+  <style>
+
+    body {
+
+      margin: 0px auto;
+      width: 600px;
+    }
+  p {
+
+    font-size: 23px;
+    float: left;
+    padding: 30px;
+    border: solid #336336 2px;
+    margin: 20px;
+  }
+  </style>
+</head>
+<body>
+  
+  <h1 id="result">aaww </h1>
+
+
+  <p id="1" class="one">1</p>
+  <p id="2" class="two">2</p>
+
+
+  </br></br>
+
+  <p id="add">+</p>
+
+
+  </br></br>
+
+  <p id="equals">=</p>
+ <!--  <p class="cancel">cancel</p> <p class="cancel">cancel</p> -->
+
+  <p class="clear-tasks"> CLEAR</p>
+
+  <script>
+
+
+    //PLACE HOLDER FOR THE RESULT
+    let Result = document.getElementById("result");
+    Result.innerText = "RESULT HERE";
+
+    // CLEAR BUTTON
+    let clear = document.querySelector('.clear-tasks'); 
+    // EVENT LISTENER TO CLEAR THE BUTTON
+    clear.addEventListener('click', function(){ 
+      Result.textContent = '';
+    });
+
+    let addition = document.querySelector("#add");
+    addition.addEventListener('click',runEventAdd);
+    function runEventAdd(e){
+      Result.textContent += ' + ';
+    }
+
+    
+
+    //ONE BUTTON
+    const numberOne = document.querySelector('.one');
+
+    // EVENT LISTENER TO CONCATINATE 1
+    numberOne.addEventListener('click', runEvent);
+
+    function runEvent(e) {
+      if (Result.textContent === 'RESULT HERE') {
+        Result.textContent = 1;
+      } else {Result.textContent += 1;
+      }
+    }
+
+    
+     //TWO BUTTON
+    const numberTwo = document.querySelector('.two');
+    // EVENT LISTENER TO CONCATINATE 2
+    numberTwo.addEventListener('click', runEvent2);
+
+    function runEvent2(e) {
+      if (Result.textContent === 'RESULT HERE') {
+        Result.textContent = 2;
+      } else {Result.textContent += 2;
+      }
+    }
+
+
+  </script>
+</body>
+</html>
